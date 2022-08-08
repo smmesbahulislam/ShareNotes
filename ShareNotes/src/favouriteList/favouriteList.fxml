@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="950.0" style="-fx-background-color: Green;" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="favouriteList.FavouriteListController">
+    <stylesheets>
+        <URL value="@favouritelist.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="329.0" layoutY="314.0" text="Favoutire List">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

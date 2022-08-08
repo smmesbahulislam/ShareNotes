@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="722.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user_login.LoginController">
+   <left>
+      <AnchorPane prefHeight="488.0" prefWidth="322.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="93.0" fitWidth="82.0" layoutX="118.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/login.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="23.0" layoutY="192.0" text="Username" />
+            <TextField fx:id="usernameField" layoutX="95.0" layoutY="188.0" prefHeight="26.0" prefWidth="193.0" promptText="Username" />
+            <Label layoutX="23.0" layoutY="229.0" text="Password" />
+            <PasswordField fx:id="passwordField" layoutX="95.0" layoutY="225.0" prefHeight="26.0" prefWidth="193.0" promptText="Password" />
+            <JFXButton fx:id="loginbtn" layoutX="61.0" layoutY="301.0" onAction="#loginButtonOnAction" prefHeight="26.0" prefWidth="200.0" style="-fx-background-color: #3db0d2#3db0d2;" text="Login" textFill="WHITE" />
+            <JFXButton fx:id="cancelbtn" layoutX="61.0" layoutY="345.0" onAction="#cancelButtonOnAction" prefHeight="26.0" prefWidth="200.0" style="-fx-background-color: #3db0d2#3db0d2;" text="Cancel" textFill="WHITE" />
+            <Label fx:id="loginMessagelbl" alignment="CENTER" layoutX="9.0" layoutY="267.0" prefHeight="17.0" prefWidth="305.0" textFill="RED" />
+            <JFXButton fx:id="signupbtn" layoutX="20.0" layoutY="441.0" onAction="#signupButtonOnAction" style="-fx-background-color: #3db0d2#3db0d2 #3db0d2#3db0d2;" text="Sign Up" textFill="WHITE" />
+            <JFXButton fx:id="forgottenpasswordbtn" layoutX="168.0" layoutY="441.0" style="-fx-background-color: #3db0d2#3db0d2 #3db0d2#3db0d2 #3db0d2#3db0d2 #3db0d2#3db0d2;" text="Forgotten password?" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="488.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="456.0" fitWidth="399.0" layoutX="1.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/branding.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

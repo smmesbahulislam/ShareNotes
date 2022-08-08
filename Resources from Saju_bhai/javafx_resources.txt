@@ -1,0 +1,24 @@
+
+----------> XML <-------------
+1. https://www.youtube.com/watch?v=n-y-YHVZSwk&list=PLsyeobzWxl7oanwaonj3iV3rxfTdEA2gC
+2. https://beginnersbook.com/2018/10/xml-tutorial-learn-xml/
+
+----------> First JavaFX Project <-------------
+1. https://www.callicoder.com/javafx-desktop-application-development-tutorial/
+2https://docs.oracle.com/javafx/2/get_started/fxml_tutorial.htm. https://docs.oracle.com/javafx/2/get_started/hello_world.htm
+3. https://docs.oracle.com/javafx/2/get_started/form.htm
+
+----------> FXML <------------
+1. https://www.callicoder.com/javafx-fxml-form-gui-tutorial/
+2. https://docs.oracle.com/javafx/2/get_started/fxml_tutorial.htm
+3. https://docs.oracle.com/javase/8/javafx/api/javafx/fxml/doc-files/introduction_to_fxml.html
+4. FXML : https://examples.javacodegeeks.com/desktop-java/javafx/fxml/javafx-fxml-tutorial/
+5. FXML : http://tutorials.jenkov.com/javafx/fxml.html
+
+
+Loading :
+**https://www.callicoder.com/javafx-fxml-form-gui-tutorial/
+**https://www.callicoder.com/javafx-desktop-application-development-tutorial/
+
+
+

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1200.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard1.DashboardController">
+    <stylesheets>
+        <URL value="@dashboard.css" />
+    </stylesheets>
+   <children>
+      <BorderPane fx:id="mainPane" layoutX="317.0" layoutY="195.0" prefHeight="700.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="700.0" prefWidth="250.0" style="-fx-background-color: Gray;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="231.0" prefWidth="250.0">
+                     <children>
+                        <Label layoutX="50.0" layoutY="96.0" text="Share Notes" textFill="WHITE">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <JFXButton alignment="BASELINE_LEFT" prefHeight="55.0" prefWidth="256.0" style="-fx-background-color: #3db0d2#3db0d2;" text="Home" textFill="WHITE">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="10.0" layoutY="10.0" onAction="#booksAndNotesBtnOnAction" prefHeight="55.0" prefWidth="256.0" style="-fx-background-color: #3db0d2#3db0d2;" text="Books &amp; Notes" textFill="WHITE">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="10.0" layoutY="65.0" onAction="#favouriteListBtnOnAction" prefHeight="55.0" prefWidth="256.0" style="-fx-background-color: #3db0d2#3db0d2;" text="Favourite List" textFill="WHITE">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="10.0" layoutY="120.0" onAction="#myUploadsBtnOnAction" prefHeight="55.0" prefWidth="256.0" style="-fx-background-color: #3db0d2#3db0d2;" text="Uploads" textFill="WHITE">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="BASELINE_LEFT" layoutX="10.0" layoutY="175.0" prefHeight="55.0" prefWidth="256.0" style="-fx-background-color: #3db0d2#3db0d2;" text="To-Do List" textFill="WHITE">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/dp_1.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label text="Fat Bots" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="User Name" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXButton style="-fx-background-color: #3db0d2#3db0d2;" text="Edit Profile" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
