@@ -38,15 +38,15 @@ public class NameOfDepartmentController implements Initializable {
     private void handleButtonAction(ActionEvent event) {
         try {
             if (event.getSource() == button[0]) {
-                System.out.println("Button 1");
+                 AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/semester/semester.fxml"));
+                 departmentPane.getChildren().setAll(pane);
             } 
             else if (event.getSource() == button[1]) {
-                System.out.println("Button 2");
-                AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/Screen1.fxml"));
+                AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/semester/semester.fxml"));
                 departmentPane.getChildren().setAll(pane);
             }
             else if (event.getSource() == button[2]) {
-                AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/Screen1.fxml"));
+                AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/semester/semester.fxml"));
                 departmentPane.getChildren().setAll(pane);
             }
 
@@ -59,8 +59,7 @@ public class NameOfDepartmentController implements Initializable {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/universityOfBd/universityOfBd.fxml"));
         departmentPane.getChildren().setAll(pane);
     }
-    
-
+ 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         TableColumn nameOfTheDepartment = new TableColumn("DEPARTMENT");

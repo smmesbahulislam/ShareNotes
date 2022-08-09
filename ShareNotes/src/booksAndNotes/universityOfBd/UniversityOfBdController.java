@@ -42,7 +42,7 @@ public class UniversityOfBdController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         TableColumn nameOfTheUniversity = new TableColumn("UNIVERSITY");
-        TableColumn actionBtn = new TableColumn("BUTTON");
+        TableColumn actionBtn = new TableColumn("");
         
         for(int i = 0;i < button.length;i++){
             button[i] = new Button();
