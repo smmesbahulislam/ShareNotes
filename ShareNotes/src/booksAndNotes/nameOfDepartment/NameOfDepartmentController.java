@@ -37,18 +37,21 @@ public class NameOfDepartmentController implements Initializable {
     
     private void handleButtonAction(ActionEvent event) {
         try {
-            if (event.getSource() == button[0]) {
+            for(int i = 0;i < button.length;i++)
+            if (event.getSource() == button[i]) {
                 System.out.println("Button 1");
+                AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/semester/semester.fxml"));
+                departmentPane.getChildren().setAll(pane);
             } 
-            else if (event.getSource() == button[1]) {
-                System.out.println("Button 2");
-                AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/Screen1.fxml"));
-                departmentPane.getChildren().setAll(pane);
-            }
-            else if (event.getSource() == button[2]) {
-                AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/Screen1.fxml"));
-                departmentPane.getChildren().setAll(pane);
-            }
+//            else if (event.getSource() == button[1]) {
+//                System.out.println("Button 2");
+//                AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/Screen1.fxml"));
+//                departmentPane.getChildren().setAll(pane);
+//            }
+//            else if (event.getSource() == button[2]) {
+//                AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/Screen1.fxml"));
+//                departmentPane.getChildren().setAll(pane);
+//            }
 
         } catch (Exception e) {
         

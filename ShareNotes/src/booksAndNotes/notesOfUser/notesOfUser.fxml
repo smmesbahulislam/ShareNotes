@@ -25,7 +25,7 @@
          </font>
       </Label>
       <TextField fx:id="filterField" layoutX="726.0" layoutY="50.0" prefHeight="25.0" prefWidth="205.0" promptText="Search" />
-      <JFXButton fx:id="previousBtn" layoutX="46.0" layoutY="657.0" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #3db0d2#3db0d2 #3db0d2#3db0d2;" text="Previous" textFill="WHITE" />
+      <JFXButton fx:id="previousBtn" layoutX="46.0" layoutY="657.0" onAction="#previousBtnOnAction" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #3db0d2#3db0d2 #3db0d2#3db0d2;" text="Previous" textFill="WHITE" />
       <JFXButton layoutX="835.0" layoutY="657.0" onAction="#addYourNotesBtnOnAction" style="-fx-background-color: #3db0d2#3db0d2 #3db0d2#3db0d2 #3db0d2#3db0d2 #3db0d2#3db0d2;" text="Add Your Note" textFill="WHITE" />
    </children>
 </AnchorPane>

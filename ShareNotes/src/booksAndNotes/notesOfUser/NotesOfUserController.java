@@ -1,6 +1,7 @@
 
 package booksAndNotes.notesOfUser;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
@@ -9,6 +10,7 @@ import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
@@ -42,8 +44,15 @@ public class NotesOfUserController implements Initializable {
     
     private void handleButtonAction(ActionEvent event){
         try{
-            if(event.getSource() == button[0])
-                System.out.println("hello");
+            for(int i = 0;i < button.length;i++){
+                if(event.getSource() == button[i]){
+                    AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/notes/notes.fxml"));
+                    userPane.getChildren().setAll(pane);             
+            }
+                
+            }
+
+            
             
         }catch(Exception e){
             
@@ -63,9 +72,14 @@ public class NotesOfUserController implements Initializable {
             if(event.getSource() == DownVote[0])
                 System.out.println("Im Down Vote");
             
+            
         }catch(Exception e){
             
         }
+    }
+    public void previousBtnOnAction(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/Courses/courses.fxml"));
+        userPane.getChildren().setAll(pane);
     }
     
 

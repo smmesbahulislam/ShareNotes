@@ -2,14 +2,17 @@
 package booksAndNotes.notes;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 public class NotesController implements Initializable {
@@ -19,6 +22,8 @@ public class NotesController implements Initializable {
     private Button btn2;
     @FXML
     private ListView listView;
+    @FXML
+    private AnchorPane notesPane;
     
     public void Button1Action(ActionEvent event){
         FileChooser fc = new FileChooser();
@@ -44,6 +49,11 @@ public class NotesController implements Initializable {
             System.out.println("File is not valid");
         }
         
+    }
+    
+        public void previousBtnOnAction(ActionEvent event) throws IOException {
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/notesOfUser/notesOfUser.fxml"));
+        notesPane.getChildren().setAll(pane);
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {

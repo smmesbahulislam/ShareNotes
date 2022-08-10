@@ -40,14 +40,14 @@ public class LoginController implements Initializable {
     } 
     
     public void loginButtonOnAction(ActionEvent event)throws Exception{
-        if(usernameField.getText().equals("") && passwordField.getText().equals("")){
+        if(usernameField.getText().equals("admin") && passwordField.getText().equals("admin")){
             Stage stage = (Stage) loginbtn.getScene().getWindow();
             stage.close();
             dashboard();
         }
             //loginMessagelbl.setText("Login Successfull.");
         else
-            loginMessagelbl.setText("Love you!!!!");
+            loginMessagelbl.setText("");
     }
     
     public void cancelButtonOnAction(ActionEvent event){

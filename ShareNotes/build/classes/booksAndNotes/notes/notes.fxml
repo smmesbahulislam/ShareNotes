@@ -7,12 +7,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="950.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="booksAndNotes.notes.NotesController">
+<AnchorPane id="AnchorPane" fx:id="notesPane" prefHeight="700.0" prefWidth="950.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="booksAndNotes.notes.NotesController">
     <stylesheets>
         <URL value="@notes.css" />
     </stylesheets>
    <children>
-      <JFXButton layoutX="41.0" layoutY="650.0" style="-fx-background-color: #3db0d2#3db0d2 #3db0d2#3db0d2;" text="Previous" textFill="WHITE" />
+      <JFXButton layoutX="41.0" layoutY="650.0" onAction="#previousBtnOnAction" style="-fx-background-color: #3db0d2#3db0d2 #3db0d2#3db0d2;" text="Previous" textFill="WHITE" />
       <ListView fx:id="listView" layoutX="41.0" layoutY="79.0" prefHeight="428.0" prefWidth="868.0" />
       <JFXButton fx:id="btn1" layoutX="41.0" layoutY="521.0" onAction="#Button1Action" style="-fx-background-color: #3db0d2#3db0d2 #3db0d2#3db0d2;" text="Upload PDF" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="34.0" text="PDF of Notes">
