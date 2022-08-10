@@ -19,8 +19,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 
-
-
 public class semesterController implements Initializable {
         
         @FXML
@@ -44,22 +42,17 @@ public class semesterController implements Initializable {
         
         private void handleButtonAction(ActionEvent event) {
             try {
-                if (event.getSource() == button[0]) {
-                     AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/Screen1.fxml"));
-                     semesterPane.getChildren().setAll(pane);
-                } 
-                else if (event.getSource() == button[1]) {
-                    AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/semester/semester.fxml"));
-                    semesterPane.getChildren().setAll(pane);
+                for(int i =0;i<7;i++)
+                {          
+                        if (event.getSource() == button[i]) {
+                                System.out.println("1");
+                             AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/Courses/courses.fxml"));
+                             semesterPane.getChildren().setAll(pane);
+                             break;
+                        } 
                 }
-                else if (event.getSource() == button[2]) {
-                    AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/semester/semester.fxml"));
-                    semesterPane.getChildren().setAll(pane);
+                }catch (Exception e) {
                 }
-
-            } catch (Exception e) {
-
-            }
         }
        
        
@@ -94,7 +87,32 @@ public class semesterController implements Initializable {
                 
                 semesterColumn.prefWidthProperty().bind(semesterTable.widthProperty().multiply(0.8));
                 actionbtn.prefWidthProperty().bind(semesterTable.widthProperty().multiply(0.2));
-//        
+                
+                        //Search Bar :
+
+                FilteredList<semester>filteredData = new FilteredList<>(data,b -> true);
+
+                filterField.textProperty().addListener((observable,oldValue,newValue) -> {
+                filteredData.setPredicate(semester -> {
+                
+                        if(newValue == null || newValue.isEmpty()){
+                            return true;
+                        }
+
+                        String lowerCaseFilter = newValue.toLowerCase();
+
+                        if(semester.getSemesters().toLowerCase().indexOf(lowerCaseFilter) != -1){
+                            return true;
+                        }
+                        else
+                            return false;
+                    });
+                });
+        
+                SortedList<semester>sortedData = new SortedList<>(filteredData);
+                sortedData.comparatorProperty().bind(semesterTable.comparatorProperty());
+                semesterTable.setItems(sortedData);
+
         }
 
 }

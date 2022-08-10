@@ -93,20 +93,16 @@ public class NameOfDepartmentController implements Initializable {
         
         
         //Search Bar :
-        
-        //Wrap the ObservableList in FilteredList(initiallly display all data).
         FilteredList<department>filteredData = new FilteredList<>(data,b -> true);
         
         //2.Set the filter Predicate whenever the filter changes.
         filterField.textProperty().addListener((observable,oldValue,newValue) -> {
             filteredData.setPredicate(department -> {
-                //If filter text is empty,display all persons.
                 
                 if(newValue == null || newValue.isEmpty()){
                     return true;
                 }
-                
-                //Compare first name and last name of every person with filter text.
+               
                 String lowerCaseFilter = newValue.toLowerCase();
                 
                 if(department.getName().toLowerCase().indexOf(lowerCaseFilter) != -1){

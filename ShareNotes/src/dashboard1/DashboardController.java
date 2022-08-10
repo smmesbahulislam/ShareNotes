@@ -35,6 +35,7 @@ public class DashboardController implements Initializable {
     
     @FXML
     private void myUploadsBtnOnAction(ActionEvent event){
+        System.out.println("1");
         FxmlLoader object = new FxmlLoader();
         Pane view = object.getPage("/myUploads/myUploads");
         mainPane.setCenter(view);

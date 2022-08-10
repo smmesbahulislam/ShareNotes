@@ -5,10 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.Pane;
 
 
-/**
- *
- * @author mesba
- */
 public class FxmlLoader{
 
         private Pane view;
@@ -21,7 +17,7 @@ public class FxmlLoader{
                 }
                 view = new FXMLLoader().load(fileUrl);
             }catch(Exception e){
-                System.out.println("No page "+fileName + "please check FxmlLoader.");
+                System.out.println("No page "+fileName + "please check FxmlLoader." +e);
             }
           return view;
         }
