@@ -35,6 +35,14 @@ public class UniversityOfBdController implements Initializable {
                 AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/nameOfDepartment/nameOfDepartment.fxml"));
                 universityPane.getChildren().setAll(pane);
             }
+            else if(event.getSource() == button[1]){
+                AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/notes/notes.fxml"));
+                universityPane.getChildren().setAll(pane);
+            }
+            else if(event.getSource() == button[2]){
+                AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/notesOfUser/notesOfUser.fxml"));
+                universityPane.getChildren().setAll(pane);
+            }
         }catch(Exception e){
             
         }
