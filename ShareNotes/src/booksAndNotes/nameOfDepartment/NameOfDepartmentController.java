@@ -38,15 +38,15 @@ public class NameOfDepartmentController implements Initializable {
     private void handleButtonAction(ActionEvent event) {
         try {
             if (event.getSource() == button[0]) {
-                System.out.println("Button 1");
+                 AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/semester/semester.fxml"));
+                 departmentPane.getChildren().setAll(pane);
             } 
             else if (event.getSource() == button[1]) {
-                System.out.println("Button 2");
-                AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/Screen1.fxml"));
+                AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/semester/semester.fxml"));
                 departmentPane.getChildren().setAll(pane);
             }
             else if (event.getSource() == button[2]) {
-                AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/Screen1.fxml"));
+                AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/semester/semester.fxml"));
                 departmentPane.getChildren().setAll(pane);
             }
 
@@ -59,8 +59,7 @@ public class NameOfDepartmentController implements Initializable {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/universityOfBd/universityOfBd.fxml"));
         departmentPane.getChildren().setAll(pane);
     }
-    
-
+ 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         TableColumn nameOfTheDepartment = new TableColumn("DEPARTMENT");
@@ -94,20 +93,16 @@ public class NameOfDepartmentController implements Initializable {
         
         
         //Search Bar :
-        
-        //Wrap the ObservableList in FilteredList(initiallly display all data).
         FilteredList<department>filteredData = new FilteredList<>(data,b -> true);
         
         //2.Set the filter Predicate whenever the filter changes.
         filterField.textProperty().addListener((observable,oldValue,newValue) -> {
             filteredData.setPredicate(department -> {
-                //If filter text is empty,display all persons.
                 
                 if(newValue == null || newValue.isEmpty()){
                     return true;
                 }
-                
-                //Compare first name and last name of every person with filter text.
+               
                 String lowerCaseFilter = newValue.toLowerCase();
                 
                 if(department.getName().toLowerCase().indexOf(lowerCaseFilter) != -1){

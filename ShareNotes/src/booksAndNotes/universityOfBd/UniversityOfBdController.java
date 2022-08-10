@@ -35,6 +35,16 @@ public class UniversityOfBdController implements Initializable {
                 AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/nameOfDepartment/nameOfDepartment.fxml"));
                 universityPane.getChildren().setAll(pane);
             }
+            else if(event.getSource() == button[1]){
+//                System.out.println("Button 2");
+                AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/nameOfDepartment/nameOfDepartment.fxml"));
+                universityPane.getChildren().setAll(pane);
+            }
+            else if(event.getSource() == button[2]){
+//                System.out.println("Button 3");
+                AnchorPane pane = FXMLLoader.load(getClass().getResource("/booksAndNotes/nameOfDepartment/nameOfDepartment.fxml"));
+                universityPane.getChildren().setAll(pane);
+            }
         }catch(Exception e){
             
         }
@@ -42,7 +52,7 @@ public class UniversityOfBdController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         TableColumn nameOfTheUniversity = new TableColumn("UNIVERSITY");
-        TableColumn actionBtn = new TableColumn("BUTTON");
+        TableColumn actionBtn = new TableColumn("");
         
         for(int i = 0;i < button.length;i++){
             button[i] = new Button();

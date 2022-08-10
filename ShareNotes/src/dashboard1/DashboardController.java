@@ -19,7 +19,7 @@ public class DashboardController implements Initializable {
     
     @FXML
     private void booksAndNotesBtnOnAction(ActionEvent event){
-        System.out.println("You clicked me!");
+        //System.out.println("You clicked me!");
         FxmlLoader object = new FxmlLoader();
         Pane view = object.getPage("/booksAndNotes/universityOfBd/universityOfBd");
         mainPane.setCenter(view);
@@ -35,6 +35,7 @@ public class DashboardController implements Initializable {
     
     @FXML
     private void myUploadsBtnOnAction(ActionEvent event){
+        System.out.println("1");
         FxmlLoader object = new FxmlLoader();
         Pane view = object.getPage("/myUploads/myUploads");
         mainPane.setCenter(view);
